@@ -1,6 +1,6 @@
 body {
-	
-
+	background-color: black;
+    font-family: 'Russo One', sans-serif;
 }
 
 .desc {
@@ -15,7 +15,8 @@ body {
 }
 
 section{
-    padding-top: 200px;
+    width: 80%;
+    padding-left: 10%;
 }
 
 section img{
@@ -26,45 +27,156 @@ section img{
 
 /*menu*/
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #c90000;
-    position: fixed;
-    top: 180px;
-    width: 100%;
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #c90000;
+  position: fixed;
+  top: 180px;
+  width: 100%;
 }
 
-nav li {
+ul.topnav li {
     float: left;
 }
 
-nav li a {
-    font-family:Consolas, Courier, sans-serif;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-transition-duration: 0.5s;
-    transition-duration: 0.5s;
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
-nav li a:hover {
+ul.topnav li a:hover {
     background-color: #111;
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
     -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {
+      display: none;
+  }
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+
+  ul.topnav.responsive {
+      position: fixed;
+  }
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+    
+    ul.topnav{
+        top: 110px;
+    }
+    
+    ul.topnav li a:hover{
+        background-color: #111;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 0);
+        transition-timing-function: cubic-bezier(0, 0, 0, 0);
+    }
+    
+    div#newsLinks{
+        display: none;
+    }
+    
+    div#newsRechts{
+        display: none;
+    }
+    
+    div#newsMidden{
+        width: 100%;
+    }
+    
+    div#left{
+        float: none;
+        width: 100%;
+    }
+    
+    div#rechts{
+        float: none;
+        width: 100%;
+    }
+    
+    div#links1{
+        display: none;
+    }
+    
+    div#rechts1{
+        display: none;
+    }
+    
+    div#midden1{
+        width: 200%;
+        padding-top: 0;
+    }
+    
+    div#tourLinks{
+        display: none;
+    }
+    
+    div#tourRechts{
+        display: none;
+    }
+    
+    div#tourMidden{
+        width: 100%;
+    }
+    
+    div#logo img{
+        width: 250px;
+    }
+    
+     div#logo{
+        height: 150px;
+    }
+    
+    div#left{
+        padding-top: 150px;
+    }
+    
+    div#midden1{
+        padding-top: 0px;
+    }
+    
+    div#tourschema{
+        padding-top: 150px;
+    }
+
+    div#tourschema2{
+        padding-top: 150px;
+    }
+
+    div#pagenmr ul li{
+        float: none;
+    }
+        
+    
+    
 }
 
 /*news divs*/
@@ -73,24 +185,50 @@ nav li a:hover {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 190px;
     background-color: black;
 }
 
-#logo img{
-    width: 420px;;
+#logo2{
+    float: left;
+    width: 50%;
 }
+
+#ajax{
+    width: 50%;
+    float: left;
+}
+
+#input[type=search] { 	           
+    font-family: Georgia;         
+    margin-top: 120px;
+    margin-left: 60%;
+}
+
+
+#logo2 img{
+    width: 400px;;
+    
+}
+    
+
+/* home */
 
 #left {
   width:50%;
   float:left;
   background-color:lightgray;
+  padding-top: 200px;
+}
+
+#left iframe{
+    width: 100%;
+    height: 300px;
 }
 
 #right {
   width:50%;
   float:left;
-  padding-top: 400px;
-  color: white;
   background-color: black;
 }
 
@@ -100,12 +238,139 @@ nav li a:hover {
 }
 
 #midden1{
+    padding-top: 200px;
     width: 60%;
     float: left;
     background-color: lightgray;
+    padding-left: 2px;
+    
+}
+
+.date{
+    border-top: 1px solid black;
+    margin-bottom: 10px;
 }
 
 #rechts1{
     width: 20%;
     float: left;
 }
+
+#tourHead{
+    text-align: center;
+}
+
+/* footer */
+
+footer{
+    color: white;
+    text-align: center;
+    float: left;
+    width: 100%;
+    padding-top: 10px;
+}
+
+footer img{
+    width: 50px;
+    padding: 10px;
+}
+
+/* tour pagina */
+
+#tourschema{
+    padding-top: 200px;
+}
+
+#tourschema2{
+    padding-top: 200px;
+}
+
+#tourschema2 img{
+    width: 50%;
+}
+
+#tourschema2 p{
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: left;
+}
+
+
+#tourLinks{
+    width: 20%;
+    float: left;
+}
+
+#tourMidden{
+    background-color: lightgray;
+    width: 60%;
+    float: left;
+    text-align: center;
+}
+
+#tourRechts{
+    width: 20%;
+    float: left;
+}
+
+#contactLinks{
+    float: left;
+    width: 50%;
+}
+
+#contactRechts{
+    float: left;
+    width: 50%;
+}
+
+#contactRechts img{
+    width: 100%;
+}
+
+#newsLinks{
+    width: 20%;
+    float: left;
+}
+
+#newsMidden{
+    background-color: lightgray;
+    width: 60%;
+    float: left;
+}
+
+#newsMidden iframe{
+    width: 100%;
+    height: 300px;
+}
+
+#newsRechts{
+    width: 20%;
+    float: left;
+}
+
+/*search*/
+
+#txtHint{
+    color: white;
+}
+
+form{
+    color: white;
+    padding-top: 250px;
+    width: 100%;
+    text-align: center;
+}
+
+tr{
+    float: left;
+}
+
+#pagenmr ul li{
+    float: left;
+    text-align: center;
+    list-style: none;
+    padding: 5px;
+}
+
+
+
